@@ -5,140 +5,163 @@
 <title>RR FITNESS GYM | Chowk Bazar, Baruasagar</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#fbf8f2;--bg2:#f3ede0;--card:#ffffff;--ink:#1c1917;--sub:#44403c;--m:#78716c;--g1:#b45309;--g2:#d97706;--grad:linear-gradient(135deg,#d97706,#b45309,#92400e);--bd:rgba(180,83,9,0.24);--sh:0 12px 32px rgba(28,25,23,0.07)}
-body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden;min-height:100vh;display:flex;flex-direction:column}
-.ribbon{background:#1c1917;color:#fcd34d;text-align:center;padding:7px 4%;font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase}
-header{background:rgba(251,248,242,0.96);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--bd);padding:14px 5%;position:sticky;top:0;z-index:50}
-.nav-wrap{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);font-weight:900;font-size:19px;letter-spacing:.6px}
+:root{--bg:#fbf8f2;--bg2:#f3ecde;--card:#ffffff;--ink:#141210;--sub:#3f3a34;--m:#78716c;--g1:#b45309;--g2:#eab308;--grad:linear-gradient(135deg,#f59e0b,#d97706,#92400e);--bd:rgba(180,83,9,0.28);--sh:0 12px 30px rgba(20,18,16,0.08)}
+body{font-family:'Arial Black',Impact,'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.5;min-height:100vh;display:flex;flex-direction:column}
+.sans{font-family:'Segoe UI',Arial,sans-serif}
+.top-bar{background:#141210;color:#facc15;text-align:center;padding:8px 4%;font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase}
+header{background:rgba(255,255,255,0.97);backdrop-filter:blur(10px);border-bottom:2px solid var(--g2);padding:12px 5%;position:sticky;top:0;z-index:50;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
+.nav{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:900;font-size:20px;letter-spacing:.8px;text-transform:uppercase}
 .brand img{height:42px;width:auto;object-fit:contain;filter:invert(1) hue-rotate(180deg)}.brand span{color:var(--g1)}
-.tabs{display:flex;gap:6px;flex-wrap:wrap}
-.tab{background:transparent;border:1.5px solid transparent;color:var(--sub);padding:8px 14px;border-radius:30px;font-size:12.5px;font-weight:700;cursor:pointer;transition:.25s}
-.tab:hover{background:var(--bg2);color:var(--g1)}
-.tab.act{background:var(--grad);color:#fff;box-shadow:0 4px 14px rgba(180,83,9,0.28)}
-main{flex:1;width:100%;max-width:1160px;margin:0 auto;padding:38px 5% 70px}
-.pg{display:none;animation:slideUp .32s ease}.pg.act{display:block}
-@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-.sec-hd{border-left:4px solid var(--g2);padding-left:14px;margin-bottom:26px}
-.sec-hd small{color:var(--g1);font-weight:800;letter-spacing:2px;font-size:11px;text-transform:uppercase;display:block}
-.sec-hd h2{font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--ink);letter-spacing:-.3px;margin-top:2px}
-.sec-hd p{color:var(--m);font-size:14px;margin-top:4px}
-.btn{display:inline-block;background:var(--grad);color:#fff;padding:12px 22px;border-radius:30px;font-weight:800;font-size:12.5px;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:.25s;box-shadow:0 6px 18px rgba(180,83,9,0.25)}
-.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(180,83,9,0.35)}
-.bo{display:inline-block;border:1.5px solid var(--g1);color:var(--g1);padding:11px 20px;border-radius:30px;font-weight:800;font-size:12.5px;letter-spacing:.7px;text-transform:uppercase;text-decoration:none;background:#fff;cursor:pointer;transition:.25s}
-.bo:hover{background:var(--bg2)}
-.hero-box{background:linear-gradient(135deg,#ffffff 0%,#f6efe2 100%);border:1.5px solid var(--bd);border-radius:20px;padding:38px 32px;box-shadow:var(--sh);display:grid;grid-template-columns:1.25fr 0.75fr;gap:28px;align-items:center}
-.kicker{display:inline-block;background:var(--bg2);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:800;padding:5px 13px;border-radius:20px;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:14px}
-h1{font-size:clamp(30px,5vw,48px);font-weight:900;line-height:1.1;color:var(--ink);margin-bottom:14px}h1 span{color:var(--g1)}
-.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.met{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:18px 14px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03)}
-.met strong{display:block;font-size:22px;font-weight:900;color:var(--g1)}.met span{font-size:11px;color:var(--m);font-weight:700;text-transform:uppercase;letter-spacing:.8px}
+.nav-tabs{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.nt{background:transparent;border:none;color:var(--ink);padding:8px 12px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:.25s}
+.nt:hover{background:var(--bg2);color:var(--g1)}
+.nt.act{background:var(--grad);color:#fff;box-shadow:0 4px 12px rgba(180,83,9,0.3)}
+.mq{background:var(--grad);color:#141210;padding:9px 0;overflow:hidden;white-space:nowrap;border-bottom:1.5px solid #92400e}
+.mq-t{display:inline-block;animation:marq 22s linear infinite;font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+@keyframes marq{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+main{flex:1;width:100%;max-width:1180px;margin:0 auto;padding:36px 5% 75px}
+.pg{display:none;animation:zoomIn .3s ease}.pg.act{display:block}
+@keyframes zoomIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.btn{display:inline-block;background:var(--grad);color:#fff;padding:13px 22px;border-radius:5px;font-weight:900;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:.25s;box-shadow:0 6px 18px rgba(180,83,9,0.28)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(180,83,9,0.38)}
+.bo{display:inline-block;border:2px solid var(--g1);color:var(--g1);padding:11px 20px;border-radius:5px;font-weight:900;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;background:#fff;cursor:pointer;transition:.25s}
+.bo:hover{background:var(--g1);color:#fff}
+.gg-hero{background:linear-gradient(135deg,#ffffff 0%,#f5ecd8 100%);border:2px solid var(--g2);border-radius:12px;padding:38px 32px;box-shadow:var(--sh);display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:center}
+.gg-badge{display:inline-block;background:#141210;color:#facc15;font-size:11px;font-weight:900;padding:5px 12px;letter-spacing:1.6px;text-transform:uppercase;border-radius:3px;margin-bottom:12px}
+h1{font-size:clamp(28px,5vw,50px);font-weight:900;line-height:1.05;text-transform:uppercase;color:var(--ink);margin-bottom:12px}h1 span{color:var(--g1)}
+.info-strip{background:#fff;border:1.5px solid var(--bd);border-left:4px solid var(--g1);border-radius:6px;padding:14px 16px;margin:16px 0 20px;font-size:13.5px;color:var(--ink)}
+.gg-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+.gst{background:#fff;border:1.5px solid var(--bd);border-top:3px solid var(--g2);border-radius:6px;padding:12px 6px;text-align:center}
+.gst strong{display:block;font-size:18px;font-weight:900;color:var(--g1)}.gst span{font-size:10px;font-weight:800;color:var(--m);text-transform:uppercase;letter-spacing:.8px}
+.sh{margin-bottom:26px;border-bottom:2px solid var(--bd);padding-bottom:12px}.sh small{color:var(--g1);font-weight:900;letter-spacing:2px;font-size:11px;text-transform:uppercase;display:block}
+.sh h2{font-size:clamp(24px,4vw,38px);font-weight:900;text-transform:uppercase;color:var(--ink);margin-top:2px}
 .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.g2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;box-shadow:var(--sh);transition:transform .25s}
+.card{background:var(--card);border:1.5px solid var(--bd);border-top:4px solid var(--g2);border-radius:8px;padding:24px;box-shadow:var(--sh);transition:transform .25s}
 .card:hover{transform:translateY(-4px)}
-.card h3{font-size:18px;font-weight:800;color:var(--ink);margin-bottom:6px}
-.team-card{text-align:center;display:flex;flex-direction:column;align-items:center}
-.team-img{width:100%;max-width:340px;height:auto;border-radius:14px;border:2px solid var(--g2);display:block;margin:0 auto 16px;box-shadow:0 10px 25px rgba(28,25,23,0.12)}
-.tg{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0 14px}.tg span{background:var(--bg2);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
-.gal img{width:100%;height:auto;border-radius:14px;border:1.5px solid var(--bd);display:block;box-shadow:var(--sh);transition:transform .3s}
-.gal img:hover{transform:scale(1.02)}
-input,select,textarea{width:100%;padding:12px 14px;margin-bottom:12px;background:var(--bg);border:1.5px solid var(--bd);border-radius:10px;color:var(--ink);font-size:13.5px}
-footer{background:#1c1917;color:#d6d3d1;text-align:center;padding:28px 5% 85px;font-size:13px;border-top:3px solid var(--g2)}footer a{color:#fcd34d;text-decoration:none}
+.card h3{font-size:18px;font-weight:900;text-transform:uppercase;color:var(--ink);margin-bottom:6px}
+.solo-card{max-width:680px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center}
+.team-img{width:100%;max-width:360px;height:auto;border-radius:8px;border:2.5px solid var(--g2);display:block;margin:0 auto 18px;box-shadow:0 10px 24px rgba(0,0,0,0.12)}
+.tg{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:10px 0 14px}.tg span{background:var(--bg2);border:1px solid var(--bd);color:var(--g1);font-size:11px;font-weight:800;padding:4px 9px;border-radius:4px;text-transform:uppercase}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.gal img{width:100%;height:auto;border-radius:8px;border:2px solid var(--bd);display:block;box-shadow:var(--sh);transition:transform .3s}
+.gal img:hover{transform:scale(1.02);border-color:var(--g1)}
+input,select,textarea{width:100%;padding:12px;margin-bottom:12px;background:var(--bg);border:1.5px solid var(--bd);border-radius:5px;color:var(--ink);font-size:13.5px}
+footer{background:#141210;color:#d6d3d1;text-align:center;padding:28px 5% 85px;font-size:13px;border-top:3px solid var(--g2)}footer a{color:#facc15;text-decoration:none}
 /* AI BOT */
-.bot-btn{position:fixed;right:18px;bottom:18px;background:var(--grad);color:#fff;border:none;border-radius:50px;padding:13px 18px;font-weight:800;font-size:13px;cursor:pointer;z-index:90;box-shadow:0 8px 24px rgba(180,83,9,0.4);display:flex;align-items:center;gap:7px}
-.bot-box{position:fixed;right:18px;bottom:76px;width:330px;max-width:90vw;background:#fff;border:2px solid var(--g2);border-radius:16px;z-index:95;display:none;flex-direction:column;overflow:hidden;box-shadow:0 18px 45px rgba(28,25,23,0.22)}
-.bot-hd{background:var(--grad);color:#fff;padding:12px 15px;font-weight:800;font-size:13px;display:flex;justify-content:space-between;align-items:center}
-.bot-msg{height:240px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;background:var(--bg)}
-.bm{padding:9px 12px;border-radius:12px;max-width:85%;line-height:1.45}.bm.ai{background:#fff;color:var(--ink);border:1px solid var(--bd);align-self:flex-start}.bm.u{background:var(--grad);color:#fff;font-weight:600;align-self:flex-end}
-.bot-q{display:flex;gap:5px;flex-wrap:wrap;padding:6px 10px;background:var(--bg)}.bot-q button{background:#fff;border:1px solid var(--bd);color:var(--g1);font-size:10.5px;font-weight:700;padding:4px 9px;border-radius:14px;cursor:pointer}
-.bot-in{display:flex;border-top:1px solid var(--bd);background:#fff}.bot-in input{margin:0;border:none;border-radius:0;background:#fff}.bot-in button{background:var(--grad);color:#fff;border:none;padding:0 15px;font-weight:800;cursor:pointer}
-@media(max-width:850px){.hero-box,.g3,.g2,.gal{grid-template-columns:1fr}.hero-box{padding:24px 18px}}
+.bot-btn{position:fixed;right:18px;bottom:18px;background:var(--grad);color:#fff;border:none;border-radius:50px;padding:13px 18px;font-weight:900;font-size:13px;cursor:pointer;z-index:90;box-shadow:0 8px 24px rgba(180,83,9,0.4);display:flex;align-items:center;gap:7px;text-transform:uppercase}
+.bot-box{position:fixed;right:18px;bottom:76px;width:330px;max-width:90vw;background:#fff;border:2px solid var(--g1);border-radius:10px;z-index:95;display:none;flex-direction:column;overflow:hidden;box-shadow:0 18px 45px rgba(0,0,0,0.22)}
+.bot-hd{background:#141210;color:#facc15;padding:12px 15px;font-weight:900;font-size:12.5px;letter-spacing:1px;display:flex;justify-content:space-between;align-items:center}
+.bot-msg{height:230px;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:8px;font-size:12.5px;background:var(--bg)}
+.bm{padding:9px 12px;border-radius:6px;max-width:85%;line-height:1.45}.bm.ai{background:#fff;color:var(--ink);border-left:3px solid var(--g1);align-self:flex-start;box-shadow:0 2px 6px rgba(0,0,0,0.05)}.bm.u{background:var(--grad);color:#fff;font-weight:700;align-self:flex-end}
+.bot-q{display:flex;gap:5px;flex-wrap:wrap;padding:6px 10px;background:var(--bg)}.bot-q button{background:#fff;border:1px solid var(--bd);color:var(--g1);font-size:10.5px;font-weight:800;padding:4px 8px;border-radius:4px;cursor:pointer}
+.bot-in{display:flex;border-top:1px solid var(--bd);background:#fff}.bot-in input{margin:0;border:none;border-radius:0;background:#fff}.bot-in button{background:var(--grad);color:#fff;border:none;padding:0 14px;font-weight:900;cursor:pointer}
+@media(max-width:850px){.gg-hero,.g3,.g2,.gal{grid-template-columns:1fr}.gg-hero{padding:24px 18px}}
 </style>
 </head>
-<body>
-<div class="ribbon">RR FITNESS GYM • CHOWK BAZAR, BARUASAGAR • EST. 18 JANUARY 2026</div>
+<body class="sans">
+<div class="top-bar">★ RR FITNESS GYM • CHOWK BAZAR, BARUASAGAR • ACHIEVE YOUR BEST SELF ★</div>
 <header>
-<div class="nav-wrap">
-<a href="#" class="brand" onclick="go('home');return false"><img src="Logo.png" onerror="this.style.display='none'" alt="RR Fitness Logo"><div>RR FITNESS <span>GYM</span></div></a>
-<div class="tabs">
-<button class="tab act" id="t-home" onclick="go('home')">Home</button>
-<button class="tab" id="t-facilities" onclick="go('facilities')">Facilities</button>
-<button class="tab" id="t-team" onclick="go('team')">Owner & Trainer</button>
-<button class="tab" id="t-gallery" onclick="go('gallery')">Gallery</button>
-<button class="tab" id="t-bmi" onclick="go('bmi')">BMI Calc</button>
-<button class="tab" id="t-contact" onclick="go('contact')">Contact & Inquiry</button>
+<div class="nav">
+<a href="#" class="brand" onclick="go('home');return false"><img src="Logo.png" onerror="this.style.display='none'" alt="Logo"><div>RR FITNESS <span>GYM</span></div></a>
+<div class="nav-tabs">
+<button class="nt act" id="t-home" onclick="go('home')">Home</button>
+<button class="nt" id="t-facilities" onclick="go('facilities')">Facilities</button>
+<button class="nt" id="t-owner" onclick="go('owner')">Gym Owner</button>
+<button class="nt" id="t-trainer" onclick="go('trainer')">Head Trainer</button>
+<button class="nt" id="t-gallery" onclick="go('gallery')">Gallery</button>
+<button class="nt" id="t-details" onclick="go('details')">Gym Details</button>
 </div>
 </div>
 </header>
 
+<div class="mq"><div class="mq-t">★ WEIGHT & STRENGTH TRAINING ★ CARDIO SECTION ★ PERSONAL TRAINING ★ DIET & NUTRITION GUIDANCE ★ POWERLIFTING TRAINING ★ WEIGHT LOSS & MUSCLE BUILDING ★ RR FITNESS GYM BARUASAGAR ★ WEIGHT & STRENGTH TRAINING ★ CARDIO SECTION ★ PERSONAL TRAINING ★ DIET & NUTRITION GUIDANCE ★</div></div>
+
 <main>
-<!-- 1. HOMEPAGE -->
+<!-- 1. HOMEPAGE (WITH GYM DETAILS) -->
 <div id="p-home" class="pg act">
-<div class="hero-box">
+<div class="gg-hero">
 <div>
-<div class="kicker">Chowk Bazar, Baruasagar • Opened 18/01/2026</div>
-<h1>ACHIEVE YOUR <span>BEST SELF</span> WITH EXPERT GUIDANCE.</h1>
-<p style="color:var(--sub);font-size:15.5px;font-weight:700;margin-bottom:10px">Expert guidance, customized plans, and the perfect environment to achieve your best self.</p>
-<p style="color:var(--m);font-size:14px;margin-bottom:22px">We are not just a gym—we are your dedicated fitness journey partner. Equipped with modern machines, ACE-certified coaching, and customized workout and diet plans designed to help you reach your goals and turn every workout into a new milestone.</p>
+<div class="gg-badge">Chowk Bazar, Baruasagar</div>
+<h1>FORGE YOUR <span>BEST SELF</span> WITH US.</h1>
+<p style="font-weight:800;color:var(--ink);font-size:15px;margin-bottom:8px">Expert guidance, customized plans, and the perfect environment to achieve your best self.</p>
+<p style="color:var(--sub);font-size:13.5px">We are not just a gym—we are your fitness journey partner. Equipped with modern machines, certified trainers, and customized workout plans designed to help you reach your fitness goals and turn every workout into a new milestone.</p>
+<div class="info-strip">
+<strong>📍 Gym Address:</strong> Chowk Bazar, Baruasagar, Jhansi (U.P.)<br>
+<strong>📞 Owner (Rash Rai):</strong> <a href="tel:+916392516727" style="color:var(--g1);font-weight:800;text-decoration:none">+91 63925 16727</a> &nbsp;|&nbsp; <strong>📞 Trainer (Sahib Khan):</strong> <a href="tel:+916394313576" style="color:var(--g1);font-weight:800;text-decoration:none">+91 63943 13576</a>
+</div>
 <div style="display:flex;gap:12px;flex-wrap:wrap">
-<button class="btn" onclick="go('contact')">Book Free Trial & Inquiry →</button>
-<button class="bo" onclick="go('facilities')">Explore Facilities</button>
+<button class="btn" onclick="go('details')">Gym Details & Inquiry →</button>
+<a class="bo" href="https://maps.app.goo.gl/vopy7aAXnw1oiXHh8?g_st=ac" target="_blank">📍 Google Map Location</a>
+</div>
+<div class="gg-stats">
+<div class="gst"><strong>5+ Yrs</strong><span>Trainer Exp.</span></div>
+<div class="gst"><strong>ACE</strong><span>Certified Coach</span></div>
+<div class="gst"><strong>100%</strong><span>Modern Gear</span></div>
 </div>
 </div>
-<div class="metrics">
-<div class="met"><strong>18/01/26</strong><span>Opening Date</span></div>
-<div class="met"><strong>5+ Years</strong><span>Trainer Exp.</span></div>
-<div class="met"><strong>ACE</strong><span>Certified Coach</span></div>
-<div class="met"><strong>100%</strong><span>Modern Gear</span></div>
+<div class="card" style="background:#fff">
+<small style="color:var(--g1);font-weight:900;letter-spacing:1.4px">QUICK GYM INQUIRY</small>
+<h3 style="font-size:21px;margin:4px 0 12px">Start Your Transformation</h3>
+<input type="text" id="hName" placeholder="Your Full Name">
+<input type="tel" id="hPhone" placeholder="Your WhatsApp / Mobile Number">
+<select id="hGoal"><option>Weight Loss & Fat Burn</option><option>Muscle Building & Hypertrophy</option><option>Powerlifting & Strength Training</option><option>1-on-1 Personal Training</option><option>General Fitness & Cardio</option></select>
+<button class="btn" style="width:100%" onclick="quickEnq()">Send on WhatsApp →</button>
 </div>
 </div>
 </div>
 
 <!-- 2. FACILITIES PAGE -->
 <div id="p-facilities" class="pg">
-<div class="sec-hd"><small>What We Offer</small><h2>Gym Facilities & Training Programs</h2><p>Modern equipment and structured programs for every fitness goal at RR Fitness Gym.</p></div>
+<div class="sh"><small>World-Class Training Zones</small><h2>Gym Facilities & Programs</h2></div>
 <div class="g3">
-<div class="card"><h3>🏋️ Weight & Strength Training</h3><p style="color:var(--m);font-size:13.5px">Modern plate-loaded machines, heavy dumbbells, squat racks, and cable stations for complete strength development.</p></div>
-<div class="card"><h3>🏃 Dedicated Cardio Section</h3><p style="color:var(--m);font-size:13.5px">Commercial treadmills, cross-trainers, and conditioning equipment for stamina and fat burning.</p></div>
-<div class="card"><h3>🎯 1-on-1 Personal Training</h3><p style="color:var(--m);font-size:13.5px">Direct floor supervision, proper exercise posture correction, and personalized daily motivation.</p></div>
-<div class="card"><h3>🥗 Diet & Nutrition Guidance</h3><p style="color:var(--m);font-size:13.5px">Customized Indian diet plans and calorie/protein tracking designed around your home meals.</p></div>
-<div class="card"><h3>⚡ Powerlifting Training</h3><p style="color:var(--m);font-size:13.5px">Dedicated Squat, Bench Press, and Deadlift programming to build raw functional power.</p></div>
-<div class="card"><h3>🔥 Weight Loss & Muscle Building</h3><p style="color:var(--m);font-size:13.5px">Goal-specific transformation programs built for sustainable fat loss and lean muscle hypertrophy.</p></div>
+<div class="card"><h3>🏋️ Weight & Strength Training</h3><p style="color:var(--sub);font-size:13.5px">Modern plate-loaded machines, heavy calibrated dumbbells, squat racks, and cable stations built for serious strength gains.</p></div>
+<div class="card"><h3>🏃 Dedicated Cardio Section</h3><p style="color:var(--sub);font-size:13.5px">Commercial treadmills, cross-trainers, and conditioning equipment engineered for stamina and high-calorie burn.</p></div>
+<div class="card"><h3>🎯 1-on-1 Personal Training</h3><p style="color:var(--sub);font-size:13.5px">Dedicated floor supervision, injury-free exercise posture correction, and daily workout accountability.</p></div>
+<div class="card"><h3>🥗 Diet & Nutrition Guidance</h3><p style="color:var(--sub);font-size:13.5px">Customized Indian meal plans and macro tracking tailored to your exact lifestyle, budget, and fitness goals.</p></div>
+<div class="card"><h3>⚡ Powerlifting Training</h3><p style="color:var(--sub);font-size:13.5px">Structured Squat, Bench Press, and Deadlift programming to build raw functional power and peak strength.</p></div>
+<div class="card"><h3>🔥 Weight Loss & Muscle Building</h3><p style="color:var(--sub);font-size:13.5px">Goal-specific transformation programs engineered for sustainable fat loss and lean muscle hypertrophy.</p></div>
 </div>
 </div>
 
-<!-- 3. OWNER & TRAINER PAGE -->
-<div id="p-team" class="pg">
-<div class="sec-hd"><small>Leadership & Coaching</small><h2>Meet The Owner & Head Trainer</h2><p>Full-frame profiles of our founder and certified transformation specialist.</p></div>
-<div class="g2">
-<div class="card team-card">
+<!-- 3. GYM OWNER PAGE (SEPARATE PAGE) -->
+<div id="p-owner" class="pg">
+<div class="sh" style="text-align:center"><small>Founder & Leadership</small><h2>Gym Owner Details</h2></div>
+<div class="card solo-card">
 <img class="team-img" src="Owner%20.jpg" alt="Gym Owner Rash Rai">
-<small style="color:var(--g1);font-weight:800;letter-spacing:1.4px">GYM OWNER & FOUNDER</small>
-<h3 style="font-size:24px;margin:4px 0 8px">Rash Rai</h3>
-<p style="color:var(--sub);font-size:14px;margin-bottom:16px">Founder of RR Fitness Gym, Chowk Bazar, Baruasagar. Committed to providing modern fitness equipment, a disciplined environment, and top-class training facilities since January 18, 2026.</p>
+<small style="color:var(--g1);font-weight:900;letter-spacing:1.5px">GYM OWNER & FOUNDER • RR FITNESS GYM</small>
+<h3 style="font-size:28px;margin:4px 0 8px">Rash Rai</h3>
+<p style="color:var(--g1);font-size:14.5px;font-weight:800;margin-bottom:12px">📞 Contact Number: <a href="tel:+916392516727" style="color:var(--g1);text-decoration:none">+91 63925 16727</a></p>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:18px">Founder of RR Fitness Gym, Chowk Bazar, Baruasagar. Dedicated to providing modern gym equipment, hygienic training floors, and a motivating fitness culture to Baruasagar.</p>
 <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
-<a class="btn" href="https://www.instagram.com/rr_fitness_baruasagar?fqnt=MXEzdzZmdzUzOHUzZw==" target="_blank">Gym Instagram →</a>
-<a class="bo" href="tel:+916392516727">Call Owner</a>
+<a class="btn" href="https://www.instagram.com/rashrai8090?gwpx=bDVhZ3BvdWt1Z2Nk" target="_blank">Owner Instagram (@rashrai8090) →</a>
+<a class="bo" href="https://wa.me/916392516727?text=Hi%20Rash%20Rai%2C%20I%20want%20to%20inquire%20about%20RR%20Fitness%20Gym.">WhatsApp Owner</a>
+<a class="bo" href="tel:+916392516727">Call +91 63925 16727</a>
 </div>
 </div>
-<div class="card team-card">
+</div>
+<!-- 4. HEAD TRAINER PAGE (SEPARATE PAGE) -->
+<div id="p-trainer" class="pg">
+<div class="sh" style="text-align:center"><small>Certified Coaching</small><h2>Head Trainer Details</h2></div>
+<div class="card solo-card">
 <img class="team-img" src="Coach.JPG" alt="Head Trainer Sahib Khan">
-<small style="color:var(--g1);font-weight:800;letter-spacing:1.4px">HEAD TRAINER & TRANSFORMATION COACH</small>
-<h3 style="font-size:24px;margin:4px 0">Sahib Khan</h3>
-<p style="color:var(--g1);font-size:13px;font-weight:700;margin-bottom:8px">5 Years Experience • American Council on Exercise (ACE) Certified</p>
-<div class="tg"><span>Body Transformation Specialist</span><span>Custom Diet & Workout Plans</span><span>Powerlifting & Strength</span></div>
-<p style="color:var(--sub);font-size:14px;margin-bottom:16px">Specialist in complete body transformations—designing customized Indian diet charts and progressive workout plans tailored to transform every client's physique.</p>
+<small style="color:var(--g1);font-weight:900;letter-spacing:1.5px">HEAD TRAINER & TRANSFORMATION COACH</small>
+<h3 style="font-size:28px;margin:4px 0">Sahib Khan</h3>
+<p style="color:var(--g1);font-size:13.5px;font-weight:800;margin-bottom:6px">5 Years Experience • American Council on Exercise (ACE) Certified</p>
+<p style="color:var(--g1);font-size:14px;font-weight:800;margin-bottom:10px">📞 Trainer Contact: <a href="tel:+916394313576" style="color:var(--g1);text-decoration:none">+91 63943 13576</a></p>
+<div class="tg"><span>Body Transformation Specialist</span><span>Customized Diet & Workout Plans</span><span>Powerlifting & Strength</span></div>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:18px">Specialist in complete body transformations—designing customized Indian diet plans and progressive workout routines tailored to transform every client's physique safely and effectively.</p>
 <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
 <a class="btn" href="https://www.instagram.com/heyysahibb?hvrq=NHc1Y3J4bTRzOGwy" target="_blank">Trainer Instagram (@heyysahibb) →</a>
-<a class="bo" href="tel:+916394313576">Call Trainer</a>
+<a class="bo" href="https://wa.me/916394313576?text=Hi%20Sahib%2C%20I%20want%20to%20start%20training%20at%20RR%20Fitness%20Gym.">WhatsApp Trainer</a>
+<a class="bo" href="tel:+916394313576">Call +91 63943 13576</a>
 </div>
 </div>
 </div>
-</div>
-<!-- 4. GALLERY PAGE -->
+
+<!-- 5. GALLERY PAGE -->
 <div id="p-gallery" class="pg">
-<div class="sec-hd"><small>Inside RR Fitness Gym</small><h2>Full-Frame Gym Gallery</h2><p>Explore our training floor, machines, and workout environment at Chowk Bazar, Baruasagar.</p></div>
+<div class="sh"><small>Inside RR Fitness Gym</small><h2>Full-Frame Gym Gallery</h2></div>
 <div class="gal">
 <img src="Gym%201.JPG" alt="RR Fitness Gym 1">
 <img src="Gym%202.JPG" alt="RR Fitness Gym 2">
@@ -150,28 +173,22 @@ footer{background:#1c1917;color:#d6d3d1;text-align:center;padding:28px 5% 85px;f
 </div>
 </div>
 
-<!-- 5. BMI CALCULATOR PAGE -->
-<div id="p-bmi" class="pg">
-<div class="sec-hd"><small>Fitness Assessment</small><h2>BMI & Daily Calorie Calculator</h2><p>Check your Body Mass Index and recommended daily calorie and protein targets.</p></div>
+<!-- 6. GYM DETAILS & INQUIRY PAGE -->
+<div id="p-details" class="pg">
+<div class="sh"><small>Location & Contact Directory</small><h2>Gym Details & Inquiry</h2></div>
 <div class="g2">
 <div class="card">
-<input type="number" id="wt" placeholder="Your Weight in KG (e.g. 68)">
-<input type="number" id="ht" placeholder="Your Height in CM (e.g. 166)">
-<select id="gl"><option value="cut">Goal: Weight Loss / Fat Burn</option><option value="main">Goal: Maintain & Tone</option><option value="bulk">Goal: Muscle Building / Bulking</option></select>
-<button class="btn" style="width:100%" onclick="calcBMI()">Calculate My Stats →</button>
+<h3 style="margin-bottom:14px">RR Fitness Gym — Official Details</h3>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:10px"><strong>🏢 Gym Name:</strong> RR FITNESS GYM</p>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:10px"><strong>📍 Gym Address:</strong> Chowk Bazar, Baruasagar, Jhansi (U.P.)</p>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:10px"><strong>👤 Owner (Rash Rai):</strong> <a href="tel:+916392516727" style="color:var(--g1);font-weight:800;text-decoration:none">+91 63925 16727</a></p>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:10px"><strong>🏋️ Trainer (Sahib Khan):</strong> <a href="tel:+916394313576" style="color:var(--g1);font-weight:800;text-decoration:none">+91 63943 13576</a></p>
+<p style="color:var(--sub);font-size:14.5px;margin-bottom:18px"><strong>📸 Gym Instagram:</strong> <a href="https://www.instagram.com/rr_fitness_baruasagar?fqnt=MXEzdzZmdzUzOHUzZw==" target="_blank" style="color:var(--g1);font-weight:800;text-decoration:none">@rr_fitness_baruasagar</a></p>
+<div style="display:flex;gap:10px;flex-wrap:wrap">
+<a class="btn" href="https://maps.app.goo.gl/vopy7aAXnw1oiXHh8?g_st=ac" target="_blank">📍 Open Google Map →</a>
+<a class="bo" href="https://wa.me/916392516727?text=Hi%20RR%20Fitness%20Gym%2C%20I%20want%20to%20visit%20the%20gym.">WhatsApp Gym</a>
 </div>
-<div class="card" id="bmiOut" style="display:flex;flex-direction:column;justify-content:center">
-<small style="color:var(--g1);font-weight:800">INSTANT REPORT</small>
-<h3 style="font-size:22px;margin:6px 0">Enter Weight & Height</h3>
-<p style="color:var(--m);font-size:13.5px">Your BMI score, ideal daily calorie intake, and protein requirement will appear here.</p>
 </div>
-</div>
-</div>
-
-<!-- 6. CONTACT & INQUIRY PAGE -->
-<div id="p-contact" class="pg">
-<div class="sec-hd"><small>Get In Touch</small><h2>Contact, Location & Inquiry</h2><p>Visit us at Chowk Bazar, Baruasagar or send a direct WhatsApp inquiry below.</p></div>
-<div class="g2">
 <div class="card">
 <h3 style="margin-bottom:12px">Send Gym Inquiry</h3>
 <input type="text" id="tName" placeholder="Your Full Name">
@@ -180,49 +197,37 @@ footer{background:#1c1917;color:#d6d3d1;text-align:center;padding:28px 5% 85px;f
 <textarea id="tMsg" rows="3" placeholder="Your Message or Preferred Timing..."></textarea>
 <button class="btn" style="width:100%" onclick="sendEnq()">Send Inquiry on WhatsApp →</button>
 </div>
-<div class="card">
-<h3 style="margin-bottom:12px">RR Fitness Gym — Direct Details</h3>
-<p style="color:var(--sub);font-size:14px;margin-bottom:8px"><strong>📍 Location:</strong> Chowk Bazar, Baruasagar, Jhansi (U.P.)</p>
-<p style="color:var(--sub);font-size:14px;margin-bottom:8px"><strong>📅 Established:</strong> 18 January 2026</p>
-<p style="color:var(--sub);font-size:14px;margin-bottom:8px"><strong>📞 Phone Numbers:</strong> <a href="tel:+916394313576" style="color:var(--g1);font-weight:700;text-decoration:none">+91 63943 13576</a> | <a href="tel:+916392516727" style="color:var(--g1);font-weight:700;text-decoration:none">+91 63925 16727</a></p>
-<p style="color:var(--sub);font-size:14px;margin-bottom:8px"><strong>💬 WhatsApp:</strong> <a href="https://wa.me/916392516727" style="color:var(--g1);font-weight:700;text-decoration:none">+91 63925 16727</a></p>
-<p style="color:var(--sub);font-size:14px;margin-bottom:16px"><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/rr_fitness_baruasagar?fqnt=MXEzdzZmdzUzOHUzZw==" target="_blank" style="color:var(--g1);font-weight:700;text-decoration:none">@rr_fitness_baruasagar</a></p>
-<div style="display:flex;gap:10px;flex-wrap:wrap">
-<a class="btn" href="https://maps.app.goo.gl/vopy7aAXnw1oiXHh8?g_st=ac" target="_blank">📍 Open Google Map →</a>
-<a class="bo" href="https://wa.me/916392516727?text=Hi%20RR%20Fitness%20Gym%2C%20I%20want%20to%20visit%20the%20gym.">Chat on WhatsApp</a>
-</div>
-</div>
 </div>
 </div>
 </main>
 
-<footer><strong style="color:#fcd34d">RR FITNESS GYM</strong> • Chowk Bazar, Baruasagar • Est. 18/01/2026<br><span>Phone: +91 63943 13576 / +91 63925 16727 • <a href="https://www.instagram.com/rr_fitness_baruasagar?fqnt=MXEzdzZmdzUzOHUzZw==" target="_blank">@rr_fitness_baruasagar</a></span><br><small>© 2026 RR FITNESS GYM. ALL RIGHTS RESERVED.</small></footer>
+<footer><strong style="color:#facc15">RR FITNESS GYM</strong> • Chowk Bazar, Baruasagar<br><span>Owner: +91 63925 16727 | Trainer: +91 63943 13576 • <a href="https://www.instagram.com/rr_fitness_baruasagar?fqnt=MXEzdzZmdzUzOHUzZw==" target="_blank">@rr_fitness_baruasagar</a></span><br><small>© 2026 RR FITNESS GYM. ALL RIGHTS RESERVED.</small></footer>
 
 <!-- AI GYM ASSISTANT BOT -->
 <button class="bot-btn" onclick="toggleBot()">🤖 RR Fitness AI</button>
 <div class="bot-box" id="botBox">
 <div class="bot-hd"><span>⚡ RR FITNESS AI ASSISTANT</span><span style="cursor:pointer" onclick="toggleBot()">✕</span></div>
-<div class="bot-msg" id="botMsg"><div class="bm ai">Welcome to <strong>RR Fitness Gym</strong>! 👋 Ask me anything about facilities, location, owner Rash Rai, or Head Trainer Sahib Khan.</div></div>
+<div class="bot-msg" id="botMsg"><div class="bm ai">Welcome to <strong>RR Fitness Gym</strong>! 👋 Ask me anything about gym address, contact numbers, facilities, owner Rash Rai, or Head Trainer Sahib Khan.</div></div>
 <div class="bot-q">
-<button onclick="askBot('Gym location?')">📍 Location</button>
-<button onclick="askBot('Facilities?')">🏋️ Facilities</button>
+<button onclick="askBot('Gym address?')">📍 Address</button>
+<button onclick="askBot('Contact numbers?')">📞 Numbers</button>
+<button onclick="askBot('Owner details?')">👤 Owner</button>
 <button onclick="askBot('Trainer details?')">🏆 Trainer</button>
-<button onclick="askBot('Contact number?')">📞 Contact</button>
 </div>
 <div class="bot-in"><input type="text" id="botIn" placeholder="Ask a question..." onkeydown="if(event.key==='Enter')sendBot()"><button onclick="sendBot()">SEND</button></div>
 </div>
 
 <script>
-function go(id){var p=document.querySelectorAll('.pg'),t=document.querySelectorAll('.tab');for(var i=0;i<p.length;i++)p[i].classList.remove('act');for(var j=0;j<t.length;j++)t[j].classList.remove('act');document.getElementById('p-'+id).classList.add('act');document.getElementById('t-'+id).classList.add('act');window.scrollTo(0,0)}
+function go(id){var p=document.querySelectorAll('.pg'),t=document.querySelectorAll('.nt');for(var i=0;i<p.length;i++)p[i].classList.remove('act');for(var j=0;j<t.length;j++)t[j].classList.remove('act');document.getElementById('p-'+id).classList.add('act');document.getElementById('t-'+id).classList.add('act');window.scrollTo(0,0)}
+function quickEnq(){var n=hName.value||"Visitor",p=hPhone.value||"Not given",g=hGoal.value;window.open("https://wa.me/916392516727?text="+encodeURIComponent("New Inquiry - RR Fitness Gym:\nName: "+n+"\nPhone: "+p+"\nGoal: "+g),"_blank")}
 function sendEnq(){var n=tName.value||"Visitor",p=tPhone.value||"Not given",g=tGoal.value,m=tMsg.value||"None";window.open("https://wa.me/916392516727?text="+encodeURIComponent("New Inquiry - RR Fitness Gym:\nName: "+n+"\nPhone: "+p+"\nGoal: "+g+"\nNotes: "+m),"_blank")}
-function calcBMI(){var w=parseFloat(wt.value),h=parseFloat(ht.value)/100,g=gl.value;if(!w||!h){alert("Please enter valid weight and height.");return}var bmi=(w/(h*h)).toFixed(1),cat=bmi<18.5?"Underweight":bmi<25?"Fit / Normal":bmi<30?"Overweight":"Obese",cal=Math.round(w*30+(g==='cut'?-450:g==='bulk'?400:0)),pro=Math.round(w*1.8);bmiOut.innerHTML='<small style="color:var(--g1);font-weight:800">YOUR FITNESS REPORT</small><h3 style="font-size:28px;color:var(--g1);margin:4px 0">BMI: '+bmi+' ('+cat+')</h3><p style="font-size:14px;color:var(--ink);margin-bottom:12px">🔥 Daily Target: <strong>'+cal+' kcal</strong> &nbsp;|&nbsp; 🥩 Protein: <strong>'+pro+'g / day</strong></p><a class="btn" href="https://wa.me/916392516727?text='+encodeURIComponent("Hi RR Fitness Gym, my BMI is "+bmi+" ("+cat+") and I want a customized plan.")+'">Get Custom Plan on WhatsApp →</a>'}
 function toggleBot(){var b=document.getElementById('botBox');b.style.display=b.style.display==='flex'?'none':'flex'}
 function askBot(q){document.getElementById('botIn').value=q;sendBot()}
-function sendBot(){var inp=document.getElementById('botIn'),q=inp.value.trim();if(!q)return;var box=document.getElementById('botMsg');box.innerHTML+='<div class="bm u">'+q.replace(/</g,"&lt;")+'</div>';inp.value='';var t=q.toLowerCase(),ans="For direct assistance, call or WhatsApp us at <strong>+91 63925 16727</strong> or <strong>+91 63943 13576</strong>.";
-if(t.includes('loc')||t.includes('addr')||t.includes('map')||t.includes('where'))ans="📍 <strong>RR Fitness Gym</strong> is located at <strong>Chowk Bazar, Baruasagar</strong> (Opened 18/01/2026). Check the Contact & Inquiry page for the Google Maps link!";
+function sendBot(){var inp=document.getElementById('botIn'),q=inp.value.trim();if(!q)return;var box=document.getElementById('botMsg');box.innerHTML+='<div class="bm u">'+q.replace(/</g,"&lt;")+'</div>';inp.value='';var t=q.toLowerCase(),ans="Contact RR Fitness Gym:<br>👤 <strong>Owner (Rash Rai):</strong> +91 63925 16727<br>🏋️ <strong>Trainer (Sahib Khan):</strong> +91 63943 13576";
+if(t.includes('loc')||t.includes('addr')||t.includes('map')||t.includes('where'))ans="📍 <strong>RR Fitness Gym</strong> is located at <strong>Chowk Bazar, Baruasagar</strong>. Check Gym Details for the Google Maps link!";
 else if(t.includes('facil')||t.includes('equip')||t.includes('machin')||t.includes('program'))ans="We offer Weight & Strength Training, Cardio Section, Personal Training, Diet & Nutrition Guidance, Powerlifting Training, and Weight Loss / Muscle Building programs.";
-else if(t.includes('train')||t.includes('sahib')||t.includes('coach')||t.includes('owner'))ans="<strong>Owner:</strong> Rash Rai<br><strong>Head Trainer:</strong> Sahib Khan (5 Years Experience, ACE Certified, Body Transformation Specialist).";
-else if(t.includes('contact')||t.includes('phone')||t.includes('number')||t.includes('whatsapp'))ans="📞 Phone: <strong>+91 63943 13576</strong> / <strong>+91 63925 16727</strong><br>💬 WhatsApp: <strong>+91 63925 16727</strong>";
+else if(t.includes('owner')||t.includes('rash'))ans="👤 <strong>Gym Owner:</strong> Rash Rai<br>📞 Phone/WhatsApp: <strong>+91 63925 16727</strong><br>📸 Instagram: <strong>@rashrai8090</strong>";
+else if(t.includes('train')||t.includes('sahib')||t.includes('coach'))ans="🏆 <strong>Head Trainer:</strong> Sahib Khan (5 Years Experience, ACE Certified, Body Transformation Specialist)<br>📞 Phone: <strong>+91 63943 13576</strong> | Instagram: <strong>@heyysahibb</strong>";
 setTimeout(function(){box.innerHTML+='<div class="bm ai">'+ans+'</div>';box.scrollTop=box.scrollHeight},300)}
 </script>
 </body>
